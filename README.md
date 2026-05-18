@@ -3,9 +3,8 @@
 ## Architectural Overview
 This repository serves as the central orchestration and parent shell for a distributed, microservices-driven **Supply Chain Management System**. The application is architected to isolate core domains—including decentralized identity services, real-time inventory tracking, multi-state order pipelines, vendor logistics, and data telemetry processing—into decoupled, autonomous services.
 
-The entire platform is built with a **Database-per-Service** design pattern to eliminate single points of failure, ensure strict database transactional boundaries, and allow independent scalability of individual components.
+The platform is built with a **Database-per-Service** design pattern to eliminate single points of failure, ensure strict database transactional boundaries, and allow independent scalability of individual components.
 
-### High-Level Engineering Focus
 * **API Edge Routing:** Requests from the user client are processed and safely reversed-proxied via a unified API Gateway layer (`main`).
 * **Stateless Identity Governance:** Centralized Role-Based Access Control (RBAC) and security handshake filters utilizing stateless JSON Web Tokens (JWT).
 * **Decoupled Relational Boundaries:** Modular microservice storage zones leveraging dedicated relational schemas (`user_db`, `inventory_db`, `order_db`) to guarantee strict domain bounds.
@@ -111,5 +110,3 @@ npm run dev
 ```
 
 The interface layer will bind locally to your browser target at `http://localhost:5173`.
-
-
