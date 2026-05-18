@@ -1,3 +1,6 @@
 target/
 node_modules/
 .env
+*.md
+setup-submodules.ps1
+package-lock.json
