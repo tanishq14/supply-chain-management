@@ -1,15 +1,15 @@
-# Enterprise Microservices-Based Supply Chain Management System
+# Microservices-Based Supply Chain Management System
 
 ## Architectural Overview
 This repository serves as the central orchestration and parent shell for a distributed, microservices-driven **Supply Chain Management System**. The application is architected to isolate core domains—including decentralized identity services, real-time inventory tracking, multi-state order pipelines, vendor logistics, and data telemetry processing—into decoupled, autonomous services.
 
-The platform is built with a **Database-per-Service** design pattern to eliminate single points of failure, ensure strict database transactional boundaries, and allow independent scalability of individual components.
+The platform is built with a **database-per-service** design pattern to eliminate single points of failure, ensure strict database transactional boundaries, and allow independent scalability of individual components.
 
 * **API Edge Routing:** Requests from the user client are processed and safely reversed-proxied via a unified API Gateway layer (`main`).
 * **Stateless Identity Governance:** Centralized Role-Based Access Control (RBAC) and security handshake filters utilizing stateless JSON Web Tokens (JWT).
 * **Decoupled Relational Boundaries:** Modular microservice storage zones leveraging dedicated relational schemas (`user_db`, `inventory_db`, `order_db`) to guarantee strict domain bounds.
 
----
+
 
 ## Distributed Project Ecosystem
 This project leverages Git submodules to maintain atomic version control across independent codebase repositories:
@@ -29,19 +29,20 @@ This project leverages Git submodules to maintain atomic version control across 
 7. **Client System Dashboard Interface (`supply-chain-management-system`)**
    * A modern React web dashboard built on Vite to provide administrative insight across the distributed network topology.
 
----
 
-## Technical Prerequisites
+
+## Prerequisites
 Ensure your local development environment has the following software provisions available:
 * **Java Development Kit (JDK) 17 or higher**
-* **Node.js (v16.0.0+)** & npm package runner
-* **MySQL Server** active and bound to local port `3306`
+* **Node.js (v16.0.0+)** & **npm package runner**
+* **MySQL Server** active and bound to local port `3306`, should be configured in your application.properties file
+* **Spring Boot**
 
----
+
 
 ## Local Environment Provisioning
 
-### 1. Unified Repository Initialization
+### 1. Repository Initialization
 To clone the entire ecosystem alongside its nested submodule directories in a single command, run:
 ```bash
 git clone --recurse-submodules https://github.com/tanishq14/supply-chain-management.git
