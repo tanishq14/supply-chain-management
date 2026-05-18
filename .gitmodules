@@ -1,0 +1,21 @@
+[submodule "basic-data-insights-service"]
+	path = basic-data-insights-service
+	url = https://github.com/tanishq14/basic-data-insights-service.git
+[submodule "supplier-management-service"]
+	path = supplier-management-service
+	url = https://github.com/tanishq14/supplier-management-service.git
+[submodule "inventory-management-service"]
+	path = inventory-management-service
+	url = https://github.com/tanishq14/inventory-management-service.git
+[submodule "order-management-service"]
+	path = order-management-service
+	url = https://github.com/tanishq14/order-management-service.git
+[submodule "supply-chain-management-system"]
+	path = supply-chain-management-system
+	url = https://github.com/tanishq14/supply-chain-management-system.git
+[submodule "user-authentication-access-control-service"]
+	path = user-authentication-access-control-service
+	url = https://github.com/tanishq14/user-authentication-access-control-service.git
+[submodule "main"]
+	path = main
+	url = https://github.com/tanishq14/main.git
