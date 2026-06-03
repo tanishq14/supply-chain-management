@@ -12,22 +12,15 @@ The platform is built with a **database-per-service** design pattern to eliminat
 
 
 ## Distributed Project Ecosystem
-This project leverages Git submodules to maintain atomic version control across independent codebase repositories:
+This project leverages Git submodules to maintain version control across independent codebase repositories:
 
 1. **API Gateway Service Container (`main`)**
-   * Central ingress point for traffic management, cross-origin request policies, and upstream routing mapping.
-2. **User Authentication & Access Control Service (`user-authentication-access-control-service`)**
-   * Identity provider responsible for secure user onboarding, password hashing, credential validation, and cryptographic token issuance.
+2. **User Authentication & Access Control Service (`user-authentication-access-control-service`)**.
 3. **Inventory Management Service (`inventory-management-service`)**
-   * Oversees storage levels, multi-warehouse component quantities, SKU catalogs, and stock mutation limits.
 4. **Order Management Service (`order-management-service`)**
-   * Manages transaction records, order generation, invoice state transitions, and fulfillment pipeline status.
 5. **Supplier Management Service (`supplier-management-service`)**
-   * Handles supplier catalogs, wholesale procurement records, vendor onboarding pipelines, and performance telemetry.
 6. **Basic Data Insights Service (`basic-data-insights-service`)**
-   * System telemetry engine processing platform events to produce analytical aggregations, key performance indicators, and reporting metrics.
 7. **Client System Dashboard Interface (`supply-chain-management-system`)**
-   * A modern React web dashboard built on Vite to provide administrative insight across the distributed network topology.
 
 
 
@@ -50,14 +43,14 @@ cd supply-chain-management
 ```
 
 ### 2. Relational Schema Provisioning
-Establish the separate database backends inside your local MySQL instance to satisfy data decoupling isolation requirements:
+Establish the separate database backends inside your local MySQL instance:
 ```SQL
 CREATE DATABASE user_db;
 CREATE DATABASE inventory_db;
 CREATE DATABASE order_db;
 ```
 
-Update your explicit credentials (username and password) inside the respective src/main/resources/application.properties configuration files inside each microservice workspace folder:
+Update your credentials (username and password) inside the respective `src/main/resources/application` properties configuration files inside each microservices:
 
 ```properties
 # Example Database Configuration mapping (Adjust per service schema)
